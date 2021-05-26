@@ -45,18 +45,15 @@ public class Servidor {
 
                 //creo el datagrama
                 DatagramPacket respuesta = new DatagramPacket(buffer, buffer.length, direccion, puertoCliente);
-                //DatagramPacket repetir = new DatagramPacket(buffer, buffer.length );
+                
                 //Envio la información
                 System.out.println("Envio la informacion del cliente");
                // socketUDP.send(respuesta);
               
               socketUDP.send(respuesta);
-              
-              //repetir = repetir + respuesta ;
+             String repetir = new String (respuesta.getData());
              
-              
-              
-                
+             
             }
 
         } catch (SocketException excepcionSocket) {
